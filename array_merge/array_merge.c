@@ -40,5 +40,7 @@ int* array_merge(int num_arrays, int* sizes, int** values) {
     result[i+1] = all_values[i];
   }
 
+  free(all_values);
+
   return result;
 }
