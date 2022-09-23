@@ -87,6 +87,11 @@ TEST(ArrayMerge, Handle_different_sizes) {
   }
 
   result = array_merge(num_arrays, sizes, a);
+
+  for (i=0; i<num_arrays; ++i) {
+    free(a[i]);
+  }
+
   arrays_match(11, result, expected);
 }
 
@@ -107,6 +112,11 @@ TEST(ArrayMerge, Handle_different_sizes_reversed) {
   }
 
   result = array_merge(num_arrays, sizes, a);
+
+  for (i=0; i<num_arrays; ++i) {
+    free(a[i]);
+  }
+
   arrays_match(11, result, expected);
 }
 
